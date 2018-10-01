@@ -1,16 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { AddAnimeComponent } from './add-anime/add-anime.component';
+import { DisplayListComponent } from './display-list/display-list.component';
+import { HttpService } from './http.service';
+import { AngularFireModule } from 'angularfire2';
+import { LoginComponent } from './auth/login/login.component';
+import { environment } from '../environments/environment';
+
+//import { AngularFireAuthModule } from 'angularfire2/auth';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    AddAnimeComponent,
+    DisplayListComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    //AngularFireAuthModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
