@@ -7,13 +7,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AddAnimeComponent } from './add-anime/add-anime.component';
 import { DisplayListComponent } from './display-list/display-list.component';
-import { HttpService } from './http.service';
+import { AnimeService } from './services/anime.service';
 import { AngularFireModule } from 'angularfire2';
 import { LoginComponent } from './auth/login/login.component';
 import { environment } from '../environments/environment';
-
-//import { AngularFireAuthModule } from 'angularfire2/auth';
-
 
 @NgModule({
   declarations: [
@@ -28,9 +25,8 @@ import { environment } from '../environments/environment';
     FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    //AngularFireAuthModule
   ],
-  providers: [HttpService],
+  providers: [AnimeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

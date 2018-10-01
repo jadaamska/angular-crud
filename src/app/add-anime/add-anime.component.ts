@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpService} from '../http.service';
+import { AnimeService } from '../services/anime.service';
 
 @Component({
   selector: 'app-add-anime',
@@ -12,7 +12,7 @@ export class AddAnimeComponent implements OnInit {
   animeTitle = '';
   animeAuthor = '';
   element;
-  constructor(private httpService: HttpService) { }
+  constructor(private animeService: AnimeService) { }
   ngOnInit() {
   }
 
@@ -25,14 +25,15 @@ export class AddAnimeComponent implements OnInit {
   }
 
   addPost() {
-       this.element = ({
-       title: this.animeTitle,
-       author: this.animeAuthor,
-       rating: 1,
-       });
-    this.httpService.addAnime(this.element).subscribe(post => {
-      console.log(post);
+    this.element = ({
+      title: this.animeTitle,
+      author: this.animeAuthor,
+      score: 1,
     });
+    this.animeService.addAnime(this.element)
+      .subscribe(post => {
+        console.log(post);
+      });
   }
 
 }

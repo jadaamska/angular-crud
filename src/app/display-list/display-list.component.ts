@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpService} from '../http.service';
+import {AnimeService} from '../services/anime.service';
 
 @Component({
   selector: 'app-display-list',
@@ -9,8 +9,8 @@ import {HttpService} from '../http.service';
 export class DisplayListComponent implements OnInit {
 
   public series;
-  constructor(private httpService: HttpService) {
-    this.httpService.getAnimeList()
+  constructor(private animeService: AnimeService) {
+    this.animeService.getAnimeList()
       .subscribe(
         (response) => {
           this.series = Object.values(response);
@@ -22,7 +22,7 @@ export class DisplayListComponent implements OnInit {
   }
 
   deletePost(item) {
-    this.httpService.removeAnime(item.name).subscribe(post => {
+    this.animeService.removeAnime(item.name).subscribe(post => {
       console.log(item.name);
       console.log(post);
     });
