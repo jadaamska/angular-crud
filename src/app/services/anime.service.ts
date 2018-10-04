@@ -11,11 +11,9 @@ export class AnimeService {
   getAnimeList() {
     return this.http.get(`${environment.apiUrl}/anime`);
   }
-  // post
   addAnime(animeData) {
     return this.http.post(`${environment.apiUrl}/anime`, animeData);
   }
-  // delete
   removeAnime(item) {
     return this.http.delete(`${environment.apiUrl}/anime/` + item._id);
   }

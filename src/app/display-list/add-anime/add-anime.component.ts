@@ -39,8 +39,8 @@ export class AddAnimeComponent implements OnInit {
       score: this.score,
     });
     this.animeService.addAnime(this.element)
-      .subscribe(element => {
-        console.log(element);
+      .subscribe(data => {
+        console.log(data);
         this.notifyParent.emit();
       });
   }

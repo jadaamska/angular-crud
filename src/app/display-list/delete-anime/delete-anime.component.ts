@@ -15,9 +15,8 @@ export class DeleteAnimeComponent implements OnInit {
   }
   deletePost() {
     this.animeService.removeAnime(this.item)
-      .subscribe(element => {
-        console.log(element);
+      .subscribe(() => {
+        this.funcToParent.emit();
       });
-    this.funcToParent.emit();
   }
 }
