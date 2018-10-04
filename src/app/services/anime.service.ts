@@ -16,7 +16,7 @@ export class AnimeService {
     return this.http.post(`${environment.apiUrl}/anime`, animeData);
   }
   // delete
-  removeAnime(id) {
-    return this.http.post(`${environment.apiUrl}/deleteAnime`, id);
+  removeAnime(item) {
+    return this.http.delete(`${environment.apiUrl}/anime/` + item._id);
   }
 }
