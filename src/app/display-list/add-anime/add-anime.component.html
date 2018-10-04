@@ -1,0 +1,12 @@
+<div class="input-field">
+  <input type="text" class="form-control bg-dark" placeholder="anime-title"
+         [(ngModel)]="animeTitle"/>
+  <input type="text" class="form-control bg-dark" placeholder="anime-author"
+         [(ngModel)]="animeAuthor" />
+  <div class="stars">
+    <div *ngFor="let star of starArray; let i = index">
+      <i class="fas fa-star" [ngStyle]="{color: getColor(i)}" (click)="saveScore(star)"></i>
+    </div>
+  </div>
+  <button class="btn btn-outline-secondary" type="submit" (click)="addPost()">Add</button>
+</div>

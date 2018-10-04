@@ -1,12 +1,18 @@
-<form (ngSubmit)="login(formData)" #formData="ngForm">
-  <div>
-    <label>E-mail</label>
-    <input ngModel type="email" name="email" required>
+<!--<form (ngSubmit)="login(formData)" #formData="ngForm">-->
+  <!--<div>-->
+    <!--<label>E-mail</label>-->
+    <!--<input ngModel type="email" name="email" required>-->
 
-    <label>Hasło</label>
-    <input ngModel type="password" name="password" required>
+    <!--<label>Hasło</label>-->
+    <!--<input ngModel type="password" name="password" required>-->
 
-    <button type="submit" [disabled]="formData.invalid">Zaloguj</button>
-    <button type="button" [disabled]="formData.invalid">Rejestracja</button>
-  </div>
-</form>
+    <!--<button type="submit" [disabled]="formData.invalid">Zaloguj</button>-->
+    <!--<button type="button" [disabled]="formData.invalid">Rejestracja</button>-->
+  <!--</div>-->
+<!--</form>-->
+<div class="login-form">
+  <p>Sign in</p>
+  <input type="text" class="form-control bg-dark" placeholder="username"/>
+  <input type="password" class="form-control bg-dark" placeholder="password"/>
+  <button class="btn btn-outline-secondary" type="submit">Login</button>
+</div>

@@ -1,3 +1,4 @@
+<app-add-anime (notifyParent)="fetchList()"></app-add-anime>
 <table class="table table-hover table-dark">
   <thead>
   <tr>
@@ -15,8 +16,8 @@
     <td>{{item.title}}</td>
     <td>{{item.author}}</td>
     <td>{{item.score}}</td>
-    <td><button class="btn btn-outline-secondary" (click)="deletePost(item)">X</button></td>
-    <td>y</td>
+    <td><app-delete-anime [item] = "item" (funcToParent)="fetchList()"></app-delete-anime></td>
+    <td><button class="btn btn-outline-secondary" (click)="editPost(item)"><i class="fas fa-edit"></i></button></td>
   </tr>
 
   </tbody>

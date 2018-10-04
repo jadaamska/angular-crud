@@ -1,0 +1,10 @@
+button {
+  color: lightgray;
+}
+nav {
+  display: flex;
+  color: lightgray;
+}
+button {
+  margin: 0.15vw;
+}

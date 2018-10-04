@@ -9,7 +9,7 @@ import {AnimeService} from '../services/anime.service';
 export class DisplayListComponent implements OnInit {
 
   public series;
-  constructor(private animeService: AnimeService) {
+  fetchList() {
     this.animeService.getAnimeList()
       .subscribe(
         (response) => {
@@ -17,15 +17,14 @@ export class DisplayListComponent implements OnInit {
         }
       );
   }
-
-  ngOnInit() {
+  constructor(private animeService: AnimeService) {
   }
-
-  deletePost(item) {
-    this.animeService.removeAnime(item.name).subscribe(post => {
-      console.log(item.name);
-      console.log(post);
+  ngOnInit() {
+    this.fetchList();
+  }
+  editPost(item) {
+    this.animeService.removeAnime(item).subscribe(res => {
+      console.log(res);
     });
   }
-
 }

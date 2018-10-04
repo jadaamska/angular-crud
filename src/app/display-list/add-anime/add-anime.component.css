@@ -1,0 +1,23 @@
+.input-field {
+  width: 80vw;
+  display: flex;
+  margin: 2.5vw auto 2.5vw auto;
+}
+.input-field button {
+  width: 12vw;
+  font-weight: bold;
+  color: lightgray;
+}
+input {
+  margin-left: 0.15vw;
+  margin-right: 0.15vw;
+}
+.form-control {
+  color: lightgray;
+}
+.stars {
+  display:flex;
+  align-items: center;
+  margin-left: 0.25vw;
+  margin-right: 0.4vw;
+}

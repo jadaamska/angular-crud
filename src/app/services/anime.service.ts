@@ -17,6 +17,6 @@ export class AnimeService {
   }
   // delete
   removeAnime(id) {
-    return this.http.delete('https://first-project-d74d9.firebaseio.com/series/' + id + '.json');
+    return this.http.post(`${environment.apiUrl}/deleteAnime`, id);
   }
 }

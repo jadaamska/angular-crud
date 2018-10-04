@@ -1,0 +1,22 @@
+p {
+  color: lightgray;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0.8vw;
+}
+input {
+  width: 30vw;
+  margin: 1.5vw 0.8vw 1.5vw 0.8vw;
+}
+.login-form {
+  width: 35vw;
+  position: relative;
+  top: 9vw;
+  margin: auto;
+}
+.form-control {
+  color: lightgray;
+}
+button {
+  margin: 0 0.8vw 0 0.8vw;
+}
